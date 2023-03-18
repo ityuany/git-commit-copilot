@@ -1,7 +1,7 @@
 import path from "node:path";
 import os from "node:os";
 import fs from "node:fs";
-import { UserConfig, createCommitMessageCreator } from "commit-copilot-core";
+import { UserConfig } from "commit-copilot-core";
 import { decrypt, encrypt } from "./crypto.js";
 import enquirer from "enquirer";
 

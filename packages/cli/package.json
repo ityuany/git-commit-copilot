@@ -1,0 +1,29 @@
+{
+  "name": "commit-copilot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "father build",
+    "build:no-clean": "father build --no-clean",
+    "dev": "father dev",
+    "doctor": "father doctor",
+    "version": "father version"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commit-copilot-core": "workspace:^1.0.0",
+    "enquirer": "^2.3.6",
+    "execa": "^7.1.1",
+    "yargs": "^17.7.1"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.4.2",
+    "@types/node": "^18.15.3",
+    "@types/yargs": "^17.0.22",
+    "father": "^4.1.7"
+  }
+}

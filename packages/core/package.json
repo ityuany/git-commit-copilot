@@ -1,0 +1,29 @@
+{
+  "name": "commit-copilot-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./es/index.js"
+    }
+  },
+  "scripts": {
+    "build": "father build",
+    "build:no-clean": "father build --no-clean",
+    "dev": "father dev",
+    "doctor": "father doctor",
+    "version": "father version"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "execa": "^7.1.1",
+    "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "father": "^4.1.7"
+  }
+}

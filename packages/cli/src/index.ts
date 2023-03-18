@@ -20,7 +20,7 @@ import { $ } from "execa";
         const { stdout } = await $`git diff`;
         const res = await create(stdout);
         await $`git add .`;
-        await $`git commit -m '${res}'`;
+        await $`git commit -m ${JSON.stringify(res)}`;
       }
     )
     .command(

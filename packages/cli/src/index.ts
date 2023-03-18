@@ -19,7 +19,8 @@ import { $ } from "execa";
       async () => {
         const { stdout } = await $`git diff`;
         const res = await create(stdout);
-        console.log("提交代码", res);
+        await $`git add .`;
+        await $`git commit -m "${res}"`;
       }
     )
     .command(
@@ -33,9 +34,5 @@ import { $ } from "execa";
 
     .help()
     .version()
-    .parserConfiguration({
-      "short-option-groups": false,
-      "camel-case-expansion": false,
-    })
     .parse();
 })();

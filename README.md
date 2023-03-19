@@ -24,9 +24,17 @@ npm_config_registry=https://registry.npmjs.org pnpx commit-copilot
 
 以下是 Commit Copilot 的使用示例：
 
-- ![](https://ityuany-assets.oss-cn-hangzhou.aliyuncs.com/uPic/uy6p0I.png) _输入命令运行 Commit Copilot_
-- ![](https://ityuany-assets.oss-cn-hangzhou.aliyuncs.com/uPic/FYvUKy.png) _输入提交信息描述_
-- ![](https://ityuany-assets.oss-cn-hangzhou.aliyuncs.com/uPic/guMtsT.png) _生成格式化的 git 提交信息_
+- 输入命令运行 Commit Copilot
+
+![](https://ityuany-assets.oss-cn-hangzhou.aliyuncs.com/uPic/uy6p0I.png)
+
+- 输入提交信息描述
+
+![](https://ityuany-assets.oss-cn-hangzhou.aliyuncs.com/uPic/FYvUKy.png)
+
+- 生成格式化的 git 提交信息
+
+![](https://ityuany-assets.oss-cn-hangzhou.aliyuncs.com/uPic/guMtsT.png)
 
 ### 安全性
 

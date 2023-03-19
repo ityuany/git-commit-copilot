@@ -9,5 +9,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: ChatGPT CodeReviewer
+        uses: anc95/ChatGPT-CodeReview@v1.0.3

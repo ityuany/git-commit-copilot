@@ -1,6 +1,6 @@
 {
   "name": "commit-copilot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -11,6 +11,7 @@
     "doctor": "father doctor",
     "version": "father version"
   },
+  "bin": "./bin/index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",

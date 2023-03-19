@@ -46,6 +46,11 @@ async function createUserConfig() {
           message: "gpt-3.5-turbo",
           value: "gpt-3.5-turbo",
         },
+        {
+          name: "gpt-4",
+          message: "gpt-4",
+          value: "gpt-4",
+        },
       ],
     },
     {

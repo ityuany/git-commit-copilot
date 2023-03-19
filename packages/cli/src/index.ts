@@ -30,7 +30,7 @@ const excludeFromDiff = [
       spinner: "dots",
     }).start();
 
-    const res = await create(stdout.replace(/`/g, "\\'"));
+    const res = await create(stdout);
     spinner.succeed("生成提交信息成功！");
     const action = await enquirer.prompt<Action>({
       type: "select",

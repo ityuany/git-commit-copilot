@@ -3,10 +3,10 @@ name: code review
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
-  build:
+  review:
     runs-on: ubuntu-latest
     steps:
       - name: ChatGPT CodeReviewer

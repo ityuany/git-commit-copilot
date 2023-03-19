@@ -18,6 +18,7 @@
     "commit-copilot-core": "workspace:^1.0.0",
     "enquirer": "^2.3.6",
     "execa": "^7.1.1",
+    "ora": "^6.1.2",
     "yargs": "^17.7.1"
   },
   "devDependencies": {

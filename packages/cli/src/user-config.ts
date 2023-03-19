@@ -4,21 +4,7 @@ import fs from "node:fs";
 import { UserConfig } from "commit-copilot-core";
 import { decrypt, encrypt } from "./crypto.js";
 import enquirer from "enquirer";
-
-const prompt = {
-  cn: `
-    现在开始，假装你是一个高级程序员。
-    你精通 git ，你接下来的主要工作就是根据用户传输给你的 git diff 信息 使用中文推荐给用户一段 commit message！
-    内容尽可能的详细，以 标准的 git message 格式给用户。区分清楚 subject 和 description , description 以列表形式组织。
-    请直接返回 commit message 信息，不要说多余的话
-    `,
-  en: `
-    Starting now, pretend that you are a senior programmer.
-    You are proficient in git. Your main task is to use the English language to recommend a commit message to users based on the git diff information transmitted by them!
-    The content should be as detailed as possible and presented in standard git message format. Clearly distinguish between subject and description, with the description organized in list form.
-    Please return only the commit message information directly without any extra words.
-    `,
-};
+import { $ } from "execa";
 
 const dir = path.join(os.homedir(), ".commit-copilot");
 const file = path.join(dir, "config.json");
@@ -26,7 +12,7 @@ const file = path.join(dir, "config.json");
 interface EnquirerResult {
   apiKey: string;
   mode: "gpt-3.5-turbo";
-  lang: string;
+  lang: "cn" | "en";
 }
 
 async function createUserConfig() {
@@ -71,10 +57,7 @@ async function createUserConfig() {
       ],
     },
   ]);
-  return {
-    ...res,
-    prompt: prompt[res.lang],
-  };
+  return res;
 }
 
 export async function createOrGetConfig() {
@@ -89,4 +72,9 @@ export async function createOrGetConfig() {
     userConfig ??= res;
   }
   return userConfig;
+}
+
+export async function resetUserConfig() {
+  await $`rm -rf ${dir}`;
+  await createOrGetConfig();
 }

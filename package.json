@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm run -r build"
   },
   "keywords": [],
+  "private": true,
   "author": "",
   "license": "ISC"
 }

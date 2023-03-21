@@ -41,6 +41,7 @@ export function createCommitMessageCreator(config: UserConfig) {
 
     const completion = await openai.createChatCompletion({
       model: config.mode,
+      temperature: 0,
       messages: GPT35TurboMessage,
     });
     return completion.data.choices[0].message.content;
